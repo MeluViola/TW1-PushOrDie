@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Resultado de la Calculadora</title>
+</head>
+<body>
+<h1>Resultado de la Calculadora de Cócteles</h1>
+
+<p>Total de cócteles a preparar: <span th:text="${totalCocteles}"></span></p>
+
+<h2>Ingredientes necesarios:</h2>
+<ul>
+  <li th:each="ingrediente, valor : ${ingredientes}">
+    <span th:text="${ingrediente}"></span>: <span th:text="${valor}"></span> ml
+  </li>
+</ul>
+
+<a th:href="@{/calculadora}">Volver a la Calculadora</a>
+</body>
+</html>
