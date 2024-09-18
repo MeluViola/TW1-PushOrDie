@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.Map;
+import java.util.stream.Collectors;
 
 @Controller
 class CalculadoraController {
@@ -20,22 +21,27 @@ class CalculadoraController {
 
     @GetMapping("/calculadora")
     public String mostrarFormulario() {
-        return "calculadora";
+        return "calculadora"; // Spring buscará /WEB-INF/views/calculadora.html
     }
 
     @PostMapping("/resultado-calculadora")
     public String calcularIngredientes(
             @RequestParam("cantidadPersonas") int cantidadPersonas,
             @RequestParam("coctelesPorPersona") int coctelesPorPersona,
-            @RequestParam Map<String, Integer> coctelesSeleccionados,
+            @RequestParam Map<String, String> coctelesSeleccionados,
             Model model) {
 
         int totalCocteles = calculadora.calcularTotalCocteles(cantidadPersonas, coctelesPorPersona);
-        Map<String, Integer> ingredientes = calculadora.calcularIngredientes(totalCocteles, coctelesSeleccionados);
+
+        Map<String, Integer> coctelesSeleccionadosInt = coctelesSeleccionados.entrySet().stream()
+                .collect(Collectors.toMap(Map.Entry::getKey, e -> Integer.parseInt(e.getValue())));
+
+        Map<String, Integer> ingredientes = calculadora.calcularIngredientes(totalCocteles, coctelesSeleccionadosInt);
 
         model.addAttribute("totalCocteles", totalCocteles);
         model.addAttribute("ingredientes", ingredientes);
 
         return "resultado-calculadora";  // Esta es la vista que mostrará los resultados.
     }
+
 }
