@@ -100,5 +100,35 @@ public class SumaDePuntosPorRecetaTest {
         assertThat(exception.getMessage(), is("El usuario no puede ser nulo."));
     }
 
+    @Test
+    public void cuandoElusuarioPaseLosCincuentaPuntosQueSubaANivelDos(){
+        Usuario usuario = new Usuario();
+        usuario.setIdUsuario(1);
+        usuario.setPuntos(0);
 
+        Receta receta1 = new Receta("Margarita", 5, 4);
+        Receta receta2 = new Receta("Mojito", 5, 5);
+        Receta receta3 = new Receta("Caipirinha", 5, 6);
+        Receta receta4 = new Receta("Margarita", 5, 3);
+        Receta receta5 = new Receta("Mojito", 5, 6);
+        Receta receta6 = new Receta("Caipirinha", 5, 7);
+        Receta receta7 = new Receta("Caipirinha", 5, 9);
+        Receta receta8 = new Receta("Margarita", 5, 11);
+        Receta receta9 = new Receta("Mojito", 5, 23);
+        Receta receta10 = new Receta("Caipirinha", 5, 15);
+
+        ServicioReceta.completarReceta(usuario, receta1);
+        ServicioReceta.completarReceta(usuario, receta2);
+        ServicioReceta.completarReceta(usuario, receta3);
+        ServicioReceta.completarReceta(usuario, receta4);
+        ServicioReceta.completarReceta(usuario, receta5);
+        ServicioReceta.completarReceta(usuario, receta6);
+        ServicioReceta.completarReceta(usuario, receta7);
+        ServicioReceta.completarReceta(usuario, receta8);
+        ServicioReceta.completarReceta(usuario, receta9);
+        ServicioReceta.completarReceta(usuario, receta10);
+
+        assertThat(usuario.getPuntos(), is(50));
+        assertThat(usuario.getNivel(), is(2));
+    }
 }
