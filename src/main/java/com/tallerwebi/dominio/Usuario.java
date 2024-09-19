@@ -5,9 +5,47 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+
 @Entity
 public class Usuario {
+/*Codigo para suma de puntos y subida de nivel*/
+    private int puntos;
+    private int nivel;
 
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int idUsuario;
+
+    public Usuario() {
+        this.puntos = 0;
+        this.nivel = 1;
+    }
+
+    public int getIdUsuario() {
+        return idUsuario;
+    }
+
+    public void setIdUsuario(int idUsuario) {
+        this.idUsuario = idUsuario;
+    }
+
+    public int getPuntos() {
+        return puntos;
+    }
+
+    public void setPuntos(int puntos) {
+        this.puntos = puntos;
+    }
+
+    public int getNivel() {
+        return nivel;
+    }
+
+    public void setNivel(int nivel) {
+        this.nivel = nivel;
+    }
+/*-----------------------------------*/
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
