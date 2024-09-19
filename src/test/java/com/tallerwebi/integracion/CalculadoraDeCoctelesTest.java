@@ -1,4 +1,4 @@
-package com.tallerwebi.calculadoraTest;
+package com.tallerwebi.integracion;
 
 import com.tallerwebi.dominio.CalculadoraDeCocteles;
 import org.junit.jupiter.api.Test;
