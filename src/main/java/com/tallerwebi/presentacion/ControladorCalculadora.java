@@ -21,7 +21,7 @@ class CalculadoraController {
 
     @GetMapping("/calculadora")
     public String mostrarFormulario() {
-        return "calculadora"; // Spring buscará /WEB-INF/views/calculadora.html
+        return "calculadora";
     }
 
     @PostMapping("/resultado-calculadora")
@@ -41,7 +41,7 @@ class CalculadoraController {
         model.addAttribute("totalCocteles", totalCocteles);
         model.addAttribute("ingredientes", ingredientes);
 
-        return "resultado-calculadora";  // Esta es la vista que mostrará los resultados.
+        return "resultado-calculadora";
     }
 
 }
