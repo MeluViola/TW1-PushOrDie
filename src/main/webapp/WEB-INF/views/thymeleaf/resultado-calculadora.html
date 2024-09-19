@@ -7,10 +7,13 @@
 <body>
 <h1>Resultado de la Calculadora de Cócteles</h1>
 
+<!-- Muestra el total de cócteles calculados -->
 <p>Total de cócteles a preparar: <span th:text="${totalCocteles}"></span></p>
 
 <h2>Ingredientes necesarios:</h2>
+<!-- Lista de ingredientes necesarios y sus cantidades -->
 <ul>
+  <!-- Itera sobre el mapa 'ingredientes' y muestra cada ingrediente y su cantidad -->
   <li th:each="ingrediente, valor : ${ingredientes}">
     <span th:text="${ingrediente}"></span>: <span th:text="${valor}"></span> ml
   </li>

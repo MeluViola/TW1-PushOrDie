@@ -7,20 +7,28 @@
 <body>
 <h1>Calculadora de Cócteles</h1>
 
+<!-- Formulario que envía los datos a la ruta "/resultado-calculadora" mediante POST -->
 <form th:action="@{/resultado-calculadora}" method="post">
+    <!-- Campo para ingresar la cantidad de personas -->
     <label for="cantidadPersonas">Cantidad de personas:</label>
     <input type="number" id="cantidadPersonas" name="cantidadPersonas" required><br>
 
+    <!-- Campo para ingresar la cantidad de cócteles por persona -->
     <label for="coctelesPorPersona">Cócteles por persona:</label>
     <input type="number" id="coctelesPorPersona" name="coctelesPorPersona" required><br>
 
+    <!-- Sección para seleccionar los cócteles que se van a hacer -->
     <h2>Seleccione los cócteles:</h2>
+
+    <!-- Opción para seleccionar la cantidad de Mojitos -->
     <label for="mojito">Mojito:</label>
     <input type="number" id="mojito" name="coctelesSeleccionados[Mojito]" value="0"><br>
 
+    <!-- Opción para seleccionar la cantidad de Margaritas -->
     <label for="margarita">Margarita:</label>
     <input type="number" id="margarita" name="coctelesSeleccionados[Margarita]" value="0"><br>
 
+    <!-- Opción para seleccionar la cantidad de Daiquiris -->
     <label for="daiquiri">Daiquiri:</label>
     <input type="number" id="daiquiri" name="coctelesSeleccionados[Daiquiri]" value="0"><br>
 

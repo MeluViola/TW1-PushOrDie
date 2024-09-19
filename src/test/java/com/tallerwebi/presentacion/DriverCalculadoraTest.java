@@ -14,38 +14,49 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 class CalculadoraControllerTest {
 
-    private CalculadoraController controller;
-    private CalculadoraDeCocteles calculadora;
+    private CalculadoraController controller; // Controlador a probar
+    private CalculadoraDeCocteles calculadora; // Dependencia del controlador
 
     @BeforeEach
     void setup() {
+        // Inicializa una instancia de CalculadoraDeCocteles antes de cada prueba
         calculadora = new CalculadoraDeCocteles();
+        // Crea una nueva instancia del controlador inyectando la calculadora
         controller = new CalculadoraController(calculadora);
     }
 
     @Test
     void testMostrarFormulario() {
+        // Prueba que el metodo mostrarFormulario() retorne el nombre correcto de la vista
         String viewName = controller.mostrarFormulario();
-        assertEquals("calculadora", viewName);
+        assertEquals("calculadora", viewName); // Verifica que la vista retornada sea "calculadora"
     }
 
     @Test
     void testCalcularIngredientes() {
+        // Crea un objeto Model para pasar los atributos entre el controlador y la vista
         Model model = new ConcurrentModel();
 
+        // Datos de prueba
         int cantidadPersonas = 5;
         int coctelesPorPersona = 2;
-        Map<String, String> coctelesSeleccionados = new HashMap<>();
-        coctelesSeleccionados.put("Mojito", "2");
-        coctelesSeleccionados.put("Margarita", "3");
 
+        // Mapa simulando los cócteles seleccionados por el usuario
+        Map<String, String> coctelesSeleccionados = new HashMap<>();
+        coctelesSeleccionados.put("Mojito", "2"); // Se seleccionan 2 Mojitos
+        coctelesSeleccionados.put("Margarita", "3"); // Se seleccionan 3 Margaritas
+
+        // Llama al metodo calcularIngredientes() del controlador con los datos de prueba
         String viewName = controller.calcularIngredientes(cantidadPersonas, coctelesPorPersona, coctelesSeleccionados, model);
 
+        // Verifica que la vista retornada sea "resultado-calculadora"
         assertEquals("resultado-calculadora", viewName);
 
+        // Verifica que el modelo contenga los atributos necesarios
         assertNotNull(model.getAttribute("totalCocteles"));
         assertNotNull(model.getAttribute("ingredientes"));
 
+        // Verifica que el total de cócteles sea correcto (5 personas * 2 cócteles por persona = 10 cócteles)
         int totalCocteles = (int) model.getAttribute("totalCocteles");
         assertEquals(10, totalCocteles);
     }

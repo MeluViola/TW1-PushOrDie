@@ -12,7 +12,7 @@ public class CalculadoraDeCocteles {
 
     // Metodo que calcula la cantidad de cócteles totales
     public int calcularTotalCocteles(int personas, int coctelesPorPersona) {
-        // Multiplicamos la cantidad de personas por los cócteles por persona
+        // Multiplicamos la cantidad de personas por los cócteles x persona
         return personas * coctelesPorPersona;
     }
 
@@ -31,7 +31,7 @@ public class CalculadoraDeCocteles {
     // Metodo para convertir ml a botellas de cierta capacidad
     public int convertirABotellas(int cantidadEnMililitros, int capacidadBotella) {
         // Dividimos la cantidad total de mililitros entre la capacidad de la botella
-        // y usamos Math.ceil para redondear hacia arriba (ya que no se puede comprar media botella, por ahora)
+        // y usamos Math.ceil para redondear hacia arriba (ya que no se puede comprar media botella)
         return (int) Math.ceil((double) cantidadEnMililitros / capacidadBotella);
     }
 }
