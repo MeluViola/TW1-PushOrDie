@@ -1,4 +1,4 @@
-package com.tallerwebi.dominio;
+package com.tallerwebi.dominio.clases;
 
 public class Receta {
     private String nombre;

@@ -1,24 +1,21 @@
 package com.tallerwebi.integracion;
 
-import com.tallerwebi.dominio.Receta;
-import com.tallerwebi.dominio.Usuario;
-import com.tallerwebi.infraestructura.ServicioReceta;
-import com.tallerwebi.infraestructura.ServicioUsuario;
+import com.tallerwebi.dominio.servicios.ServicioReceta;
 import com.tallerwebi.presentacion.ControladorRecetas;
-import org.junit.Before;
-import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
+import org.junit.jupiter.api.BeforeEach;
+
+import static org.mockito.Mockito.mock;
 
 public class ControladorRecetasTest {
 
     private ControladorRecetas controladorRecetas;
-    private ServicioReceta servicioReceta;
+    private ServicioReceta servicioRecetaImpl;
 
-    @Before
+    /*@BeforeEach
     public void setUp() {
-        servicioReceta = new ServicioReceta();
-        controladorRecetas = new ControladorRecetas(servicioReceta); // Inyección manual
-    }
+        servicioRecetaImpl = mock(ServicioReceta.class);
+        controladorRecetas = new ControladorRecetas(servicioRecetaImpl); // Inyección manual
+    }*/
 
 }
 

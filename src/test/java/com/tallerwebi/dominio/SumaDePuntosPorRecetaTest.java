@@ -4,17 +4,20 @@ import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.is;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-import com.tallerwebi.infraestructura.ServicioReceta;
+import com.tallerwebi.dominio.clases.Receta;
+import com.tallerwebi.dominio.clases.Usuario;
+import com.tallerwebi.dominio.servicios.ServicioReceta;
+import com.tallerwebi.dominio.serviciosImpl.ServicioRecetaImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 
 public class SumaDePuntosPorRecetaTest {
-    private ServicioReceta servicioReceta; //no detectaba el autowired, por ende se definio manualmente el constructor
+    private ServicioReceta servicioRecetaImpl; //no detectaba el autowired, por ende se definio manualmente el constructor
 
     @BeforeEach
     public void setUp() {
-        servicioReceta = new ServicioReceta();
+        servicioRecetaImpl = new ServicioRecetaImpl();
     }
 
     @Test
@@ -44,7 +47,7 @@ public class SumaDePuntosPorRecetaTest {
         usuario.setPuntos(0); // Inicializa los puntos en cero
         Receta receta = new Receta("Manhattan", 4, 1);
 
-        ServicioReceta.completarReceta(usuario, receta);
+        this.servicioRecetaImpl.completarReceta(usuario, receta);
 
         assertThat(usuario.getPuntos(), is(4));
     }
@@ -55,7 +58,7 @@ public class SumaDePuntosPorRecetaTest {
         Receta receta = new Receta("Mojito", 0, 2); // Puntaje 0 no permitido
 
         IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
-            ServicioReceta.completarReceta(usuario, receta);
+            this.servicioRecetaImpl.completarReceta(usuario, receta);
         });
 
         assertThat(exception.getMessage(), is("El puntaje de la receta debe estar entre 1 y 5"));
@@ -67,7 +70,7 @@ public class SumaDePuntosPorRecetaTest {
         usuario.setPuntos(3); // Usuario ya tiene 3 puntos acumulados
         Receta receta = new Receta("Martini", 2, 3);
 
-        ServicioReceta.completarReceta(usuario, receta);
+        this.servicioRecetaImpl.completarReceta(usuario, receta);
 
         assertThat(usuario.getPuntos(), is(5));
     }
@@ -81,9 +84,9 @@ public class SumaDePuntosPorRecetaTest {
         Receta receta2 = new Receta("Mojito", 2, 5);
         Receta receta3 = new Receta("Caipirinha", 5, 6);
 
-        ServicioReceta.completarReceta(usuario, receta1);
-        ServicioReceta.completarReceta(usuario, receta2);
-        ServicioReceta.completarReceta(usuario, receta3);
+        this.servicioRecetaImpl.completarReceta(usuario, receta1);
+        this.servicioRecetaImpl.completarReceta(usuario, receta2);
+        this.servicioRecetaImpl.completarReceta(usuario, receta3);
 
         assertThat(usuario.getPuntos(), is(10));
     }
@@ -94,7 +97,7 @@ public class SumaDePuntosPorRecetaTest {
         Receta receta = new Receta("Whiskey Sour", 3, 7);
 
         IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
-            ServicioReceta.completarReceta(usuario, receta);
+            this.servicioRecetaImpl.completarReceta(usuario, receta);
         });
 
         assertThat(exception.getMessage(), is("El usuario no puede ser nulo."));
@@ -117,16 +120,16 @@ public class SumaDePuntosPorRecetaTest {
         Receta receta9 = new Receta("Mojito", 5, 23);
         Receta receta10 = new Receta("Caipirinha", 5, 15);
 
-        ServicioReceta.completarReceta(usuario, receta1);
-        ServicioReceta.completarReceta(usuario, receta2);
-        ServicioReceta.completarReceta(usuario, receta3);
-        ServicioReceta.completarReceta(usuario, receta4);
-        ServicioReceta.completarReceta(usuario, receta5);
-        ServicioReceta.completarReceta(usuario, receta6);
-        ServicioReceta.completarReceta(usuario, receta7);
-        ServicioReceta.completarReceta(usuario, receta8);
-        ServicioReceta.completarReceta(usuario, receta9);
-        ServicioReceta.completarReceta(usuario, receta10);
+        this.servicioRecetaImpl.completarReceta(usuario, receta1);
+        this.servicioRecetaImpl.completarReceta(usuario, receta2);
+        this.servicioRecetaImpl.completarReceta(usuario, receta3);
+        this.servicioRecetaImpl.completarReceta(usuario, receta4);
+        this.servicioRecetaImpl.completarReceta(usuario, receta5);
+        this.servicioRecetaImpl.completarReceta(usuario, receta6);
+        this.servicioRecetaImpl.completarReceta(usuario, receta7);
+        this.servicioRecetaImpl.completarReceta(usuario, receta8);
+        this.servicioRecetaImpl.completarReceta(usuario, receta9);
+        this.servicioRecetaImpl.completarReceta(usuario, receta10);
 
         assertThat(usuario.getPuntos(), is(50));
         assertThat(usuario.getNivel(), is(2));

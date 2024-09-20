@@ -1,5 +1,6 @@
-package com.tallerwebi.dominio;
+package com.tallerwebi.dominio.serviciosImpl;
 
+import com.tallerwebi.dominio.servicios.ServicioCalculadora;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
@@ -8,7 +9,7 @@ import java.util.Map;
 
 
 @Service
-public class CalculadoraDeCocteles {
+public class ServicioCalculadoraImpl implements ServicioCalculadora {
 
     // Metodo que calcula la cantidad de cócteles totales
     public int calcularTotalCocteles(int personas, int coctelesPorPersona) {

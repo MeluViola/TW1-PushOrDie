@@ -1,6 +1,6 @@
 package com.tallerwebi.presentacion;
 
-import com.tallerwebi.dominio.CalculadoraDeCocteles;
+import com.tallerwebi.dominio.serviciosImpl.ServicioCalculadoraImpl;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,10 +13,10 @@ import java.util.stream.Collectors;
 @Controller // controlador de Spring MVC
 class CalculadoraController {
 
-    private final CalculadoraDeCocteles calculadora;
+    private final ServicioCalculadoraImpl calculadora;
 
     // Constructor que recibe la dependencia de la CalculadoraDeCocteles e inyecta la instancia
-    public CalculadoraController(CalculadoraDeCocteles calculadora) {
+    public CalculadoraController(ServicioCalculadoraImpl calculadora) {
         this.calculadora = calculadora;
     }
 

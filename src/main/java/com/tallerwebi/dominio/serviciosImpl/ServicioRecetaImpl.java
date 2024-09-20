@@ -1,16 +1,17 @@
-package com.tallerwebi.infraestructura;
+package com.tallerwebi.dominio.serviciosImpl;
 
-import com.tallerwebi.dominio.Receta;
-import com.tallerwebi.dominio.Usuario;
+import com.tallerwebi.dominio.clases.Receta;
+import com.tallerwebi.dominio.servicios.ServicioReceta;
+import com.tallerwebi.dominio.clases.Usuario;
+import org.springframework.stereotype.Service;
 
-public class ServicioReceta {
+@Service
+public class ServicioRecetaImpl implements ServicioReceta {
     private static final int[] PUNTOS_PARA_NIVEL = {0, 50, 100, 200, 500};
-    private static ServicioReceta instance;
 
-public ServicioReceta() {
 
-}
-    public static void completarReceta(Usuario usuario, Receta receta) { //Verifica los datos de usuario y recetas, para asignar los puntos correspondientes
+    @Override
+    public void completarReceta(Usuario usuario, Receta receta) { //Verifica los datos de usuario y recetas, para asignar los puntos correspondientes
 
         // Validación de que el usuario no sea nulo y la receta tenga puntaje valido
         if (usuario == null) {
@@ -23,8 +24,8 @@ public ServicioReceta() {
         verificarYActualizarNivel(usuario);
     }
 
-    //Verifica en que nivel esta el usuario, y si este supera los valores precargados, sube de nivel
-    private static void verificarYActualizarNivel(Usuario usuario) {
+    @Override//Verifica en que nivel esta el usuario, y si este supera los valores precargados, sube de nivel
+    public void verificarYActualizarNivel(Usuario usuario) {
         for (int i = PUNTOS_PARA_NIVEL.length - 1; i > 0; i--) {
             if (usuario.getPuntos() >= PUNTOS_PARA_NIVEL[i]) {
                 usuario.setNivel(i + 1);
@@ -33,15 +34,16 @@ public ServicioReceta() {
         }
     }
 
-    public static Receta buscarPorId(int idReceta) {
+    @Override
+    public Receta buscarPorId(int idReceta) {
         return null;
     }
 
 
-    public static ServicioReceta getInstance() {
+   /* public static ServicioRecetaImpl getInstance() {
         if (instance == null) {
-            instance = new ServicioReceta();
+            instance = new ServicioRecetaImpl();
         }
         return instance;
-    }
+    }*/
 }

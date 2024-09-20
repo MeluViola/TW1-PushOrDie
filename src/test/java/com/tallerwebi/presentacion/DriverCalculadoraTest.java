@@ -1,6 +1,6 @@
 package com.tallerwebi.presentacion;
 
-import com.tallerwebi.dominio.CalculadoraDeCocteles;
+import com.tallerwebi.dominio.serviciosImpl.ServicioCalculadoraImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.ui.Model;
@@ -15,25 +15,25 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 class CalculadoraControllerTest {
 
     private CalculadoraController controller; // Controlador a probar
-    private CalculadoraDeCocteles calculadora; // Dependencia del controlador
+    private ServicioCalculadoraImpl calculadora; // Dependencia del controlador
 
     @BeforeEach
     void setup() {
         // Inicializa una instancia de CalculadoraDeCocteles antes de cada prueba
-        calculadora = new CalculadoraDeCocteles();
+        calculadora = new ServicioCalculadoraImpl();
         // Crea una nueva instancia del controlador inyectando la calculadora
         controller = new CalculadoraController(calculadora);
     }
 
     @Test
-    void testMostrarFormulario() {
+    void queElMetodoMostrarFormularioRetorneElNombreCorrectoDeLaVista() {
         // Prueba que el metodo mostrarFormulario() retorne el nombre correcto de la vista
         String viewName = controller.mostrarFormulario();
         assertEquals("calculadora", viewName); // Verifica que la vista retornada sea "calculadora"
     }
 
     @Test
-    void testCalcularIngredientes() {
+    void queAlCrearUnModeloParaPasarLosAtributosEntreElControladorYLaVistaVerifiqueElCorrectoFuncionamientoDeLaCalculadora() {
         // Crea un objeto Model para pasar los atributos entre el controlador y la vista
         Model model = new ConcurrentModel();
 
