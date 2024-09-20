@@ -1,4 +1,4 @@
-package com.tallerwebi.calculadoraTest;
+package com.tallerwebi.integracion;
 
 import com.tallerwebi.dominio.servicios.ServicioCalculadora;
 import com.tallerwebi.dominio.serviciosImpl.ServicioCalculadoraImpl;

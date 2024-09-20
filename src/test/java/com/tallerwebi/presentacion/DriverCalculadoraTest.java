@@ -12,7 +12,7 @@ import java.util.Map;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-class CalculadoraControllerTest {
+class DriverCalculadoraTest {
 
     private CalculadoraController controller; // Controlador a probar
     private ServicioCalculadoraImpl calculadora; // Dependencia del controlador
