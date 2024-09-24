@@ -4,14 +4,14 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.io.Serializable;
 
 
 @Entity
-public class Usuario {
+public class Usuario implements Serializable {
 /*Codigo para suma de puntos y subida de nivel*/
     private int puntos;
     private int nivel;
-
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

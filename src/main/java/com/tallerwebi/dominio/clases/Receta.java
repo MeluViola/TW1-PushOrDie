@@ -1,5 +1,6 @@
 package com.tallerwebi.dominio.clases;
 
+
 public class Receta {
     private String nombre;
     private int idReceta;
