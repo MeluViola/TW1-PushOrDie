@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class ServicioRecetaImpl implements ServicioReceta {
-    private static final int[] PUNTOS_PARA_NIVEL = {0, 50, 100, 200, 500};
+  private static final int[] PUNTOS_PARA_NIVEL = {0, 50, 100, 200, 500};
 
 
     @Override
@@ -46,4 +46,5 @@ public class ServicioRecetaImpl implements ServicioReceta {
         }
         return instance;
     }*/
+
 }

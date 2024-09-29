@@ -45,9 +45,10 @@ public class Usuario implements Serializable {
     public void setNivel(int nivel) {
         this.nivel = nivel;
     }
+
 /*-----------------------------------*/
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+ /*   @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)*/
     private Long id;
     private String email;
     private String password;
@@ -92,4 +93,6 @@ public class Usuario implements Serializable {
     public void activar() {
         activo = true;
     }
+
+
 }
