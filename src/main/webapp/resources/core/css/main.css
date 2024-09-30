@@ -1,19 +1,276 @@
-body {
-  padding-top: 5rem;
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap');
+
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+    background-image: url("../imgStatic/FondoPc5.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+
 }
-.starter-template {
-  padding: 3rem 1.5rem;
-  text-align: center;
+#menu nav {
+    text-align: center;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 1);
+    color: #fff;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1000
 }
 
-h1{
-	color:#0000FF;
+#menu nav ul{
+    margin: 10px 5em 20px 3em;
+    list-style: none;
+    display: flex;
+    color:#fff;
+    text-decoration: none;
+
+}
+#menu nav ul li{
+    list-style: none;
+    margin-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: medium;
+    font-family: "Playpen sans";
+    font-weight: 700;
 }
 
-h2{
-	color:#FF0000;
+#menu nav ul li a{
+    text-decoration: none;
+    color: #fff;
 }
 
-.navbar-brand{
-    margin:0 2rem;
+#menu nav ul li :hover{
+    background-color: #ccc;
+    margin: 0;
+    padding-top: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 10px;
+    color: #333;
+    justify-content: center;
+}
+a{
+    text-decoration: none;
+}
+
+.boton{
+    background-color: #cb5656;
+    color: white;
+    font-weight: 700;
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px 5em 10px 10px;
+}
+
+.hero {
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15em;
+    padding-bottom: 15%;
+    text-align: center;
+    margin: 60px 0;
+}
+.hero h1{
+    font-family: "Pacifico", cursive;
+    font-size: 150px;
+    font-style: normal;
+    text-shadow: 1px 1px 15px black;;
+    color: #fff;
+    margin: 0;
+}
+.hero h2 {
+    font-family: "Playpen sans";
+    font-size: xx-large;
+    text-shadow: 1px 1px 15px black;;
+    color: #fff;
+    padding: 0;
+    margin-top: 0;
+}
+.hero a {
+    font-weight: 700;
+    color: white;
+}
+
+h3{
+    font-family: "Pacifico", cursive;
+    font-size: xx-large;
+}
+section {
+    margin: 0;
+    padding: 0;
+}
+.textos {
+    background-color: rgba(0, 0, 0, 0.85); /* Negro con 85% de opacidad */
+    color: white;
+}
+.textos2{
+    text-align: center;
+    align-items: center;
+    padding-top: 5rem;
+}
+.info-objetivo p {
+    padding: 0px 10em 0px 10em;
+    font-size: medium;
+    font-family: "Playpen sans";
+    text-align: justify;
+}
+.informacion2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 30px 10px 30px;
+}
+.columnas-info {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+}
+
+.box {
+    margin-bottom: 10px;
+    padding: 10px;
+    text-align: center;
+}
+.box p{
+    text-align: justify;
+    font-size: medium;
+    font-family: "Playpen sans";
+}
+
+.fotos p{
+    padding: 0px 10em 0px 10em;
+    font-size: medium;
+    font-family: "Playpen sans";
+}
+/*PREGUNTAS FRECUENTES*/
+.FAQ {
+    padding: 20px;
+    margin: 2rem 15em 0 15em;
+}
+
+.preguntas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual tamaño */
+    gap: 20px; /* Espacio entre las columnas y filas */
+    justify-content: center; /* Centra el grid en el contenedor */
+}
+
+.box2 {
+    background-color: rgba(221, 219, 219, 0.91);
+    border: 1px solid #ccc;
+    padding: 30px 20px 20px 20px;
+    text-align: center;
+    font-size: medium;
+    font-family: "Playpen sans";
+    color: #333;
+}
+
+.box2 h2{
+    font-size: large;
+    font-weight: bold;
+}
+/*COMUNIDAD*/
+.fotos img{
+    width: 15rem;
+}
+
+.lista-fotos{
+    display: grid;
+    grid-template-columns: repeat(5, 15em); /* 3 columnas de igual tamaño */
+    gap: 10px; /* Espacio entre las columnas y filas */
+    justify-content: center; /* Centra el grid en el contenedor */
+
+}
+
+.box3{
+    text-align: center;
+}
+
+/*CONTACTO*/
+.contacto{
+    margin: 5rem 30rem 0 30rem;  /*arriba-derecha-abajo-izquierda*/
+
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: large;
+    font-family: "Playpen sans";
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    margin: 2rem 10rem 2rem 10rem;
+    font-size: 25px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: medium;
+    font-family: "Playpen sans";
+    font-weight: 700;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/*FOOTER*/
+button {
+    background-color: #cb5656;
+    color: white;
+    border: none;
+    padding: 20px 30px;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #cb5698;
+}
+
+footer {
+    text-align: center;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    position: relative;
+    bottom: 0;
 }
