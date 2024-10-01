@@ -1,42 +1,5 @@
-/* Estilos generales */
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap');
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-    color: #333;
-    background-image: url("../imgStatic/FondoPc4.jpeg"); /* Puedes ajustar la imagen según sea necesario */
-    background-size: cover;
-    background-attachment: fixed;
-    height: 100vh;
-}
-nav {
-    text-align: center;
-    top: 0px;
-    background-color: rgba(0, 0, 0, 1);
-    color: #fff;
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    position: fixed;
-    z-index: 1000
-}
-nav ul{
-    margin: 10px 5em 20px 3em;
-    list-style: none;
-    display: flex;
-    color:#fff;
-    text-decoration: none;
-
-}
-nav ul li{
-    list-style: none;
-    margin-left: 15px;
-    font-family: "Playpen sans";
-}
 
 /* Contenedor para formularios de autenticación */
 .auth-container {

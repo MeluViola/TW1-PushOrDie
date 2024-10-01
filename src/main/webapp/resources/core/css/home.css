@@ -1,78 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap');
 
-body{
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-    color: #333;
-    background-image: url("../imgStatic/FondoPc5.jpg");
-    background-size: cover;
-    background-attachment: fixed;
-
-}
-#menu nav {
-    text-align: center;
-    top: 0px;
-    background-color: rgba(0, 0, 0, 1);
-    color: #fff;
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    position: fixed;
-    z-index: 1000
-}
-
-#menu nav ul{
-    margin: 10px 5em 20px 3em;
-    list-style: none;
-    display: flex;
-    color:#fff;
-    text-decoration: none;
-
-}
-#menu nav ul li{
-    list-style: none;
-    margin-top: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
-    font-size: medium;
-    font-family: "Playpen sans";
-    font-weight: 700;
-}
-
-#menu nav ul li a{
-    text-decoration: none;
-    color: #fff;
-}
-
-#menu nav ul li :hover{
-    background-color: #ccc;
-    margin: 0;
-    padding-top: 20px;
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-bottom: 10px;
-    color: #333;
-    justify-content: center;
-}
-a{
-    text-decoration: none;
-}
-
-.boton{
-    background-color: #cb5656;
-    color: white;
-    font-weight: 700;
-    border: none;
-    padding: 5px 10px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin: 10px 5em 10px 10px;
-}
-
 .hero {
     justify-items: center;
     justify-content: center;
@@ -228,44 +156,16 @@ textarea {
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
+    max-height: 200px;
 }
 
 textarea {
     resize: vertical; /* Permite redimensionar verticalmente */
+    max-height: 200px;
 }
 
-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    margin: 2rem 10rem 2rem 10rem;
-    font-size: 25px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: medium;
-    font-family: "Playpen sans";
-    font-weight: 700;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
 
 /*FOOTER*/
-button {
-    background-color: #cb5656;
-    color: white;
-    border: none;
-    padding: 20px 30px;
-    font-size: 25px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-button:hover {
-    background-color: #cb5698;
-}
-
 footer {
     text-align: center;
     padding: 5px;
