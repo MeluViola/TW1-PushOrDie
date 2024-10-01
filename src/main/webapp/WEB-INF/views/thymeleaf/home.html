@@ -1,35 +1,193 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <title>Taller Web I</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de Inicio - Coctelería</title>
 
   <!-- Boostrap core css -->
   <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.2.0/css/bootstrap.min.css}"/>
 
   <!-- custom style -->
-  <link rel="stylesheet" th:href="@{/css/main.css}"/>
-
+  <link rel="stylesheet" th:href="@{/css/generales.css}"/>
+  <link rel="stylesheet" th:href="@{/css/home.css}"/>
 </head>
-
 <body>
+<header id="menu">
+  <nav>
+    <ul id="nav-links">
+      <li><a th:href="@{home.html}">Inicio</a></li>
+      <li><a href="#info">Nosotros</a></li>
+      <li><a href="#comunidad">Comunidad</a></li>
+      <li><a href="#FAQ">FAQ</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+      <li><a th:href="@{/nuevo-usuario.html}">Unite a nuestra comunidad</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <div>
+    <section class="hero">
+      <h1>Cheers & Cheers</h1>
+      <h2>De la inspiración a la perfección, un cóctel a la vez.</h2>
+      <button><a href="#info">&#x2B07</a></button>
+    </section>
+    <section class="textos">
+      <div class="textos2">
+        <section id="info" class="informacion">
+          <div id="objetivo" class="info-objetivo">
+            <h3>Nuestro objetivo</h3>
+            <p>Nuestro objetivo es transformar la pasión por la coctelería en una experiencia inolvidable.
+              Nos enfocamos en crear un espacio donde aficionados y profesionales puedan conectar, inspirarse y crecer,
+              explorando el arte de la mezcla con sofisticación y creatividad.
+              Buscamos que cada visita sea un paso más hacia el perfeccionamiento,
+              ofreciendo las herramientas y el entorno necesario para que cada cóctel no solo sea una bebida,
+              sino una obra maestra que refleje tu estilo y conocimiento.</p>
+          </div>
+        </section>
 
-<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-  <a class="navbar-brand" href="#">UNLAM</a>
-</nav>
+        <section id="info2" class="informacion2">
+          <div id="columnas" class="columnas-info">
+            <div class="box">
+              <h3>Instructores</h3>
+              <p>Nuestros instructores son verdaderos maestros del arte de la coctelería, con una pasión y experiencia que inspiran.
+                Cada uno aporta un enfoque único, guiándote a través de un aprendizaje enriquecedor que combina técnica, creatividad y la última en tendencias.
+                Con su apoyo, transformarás cada sesión en una oportunidad para dominar el arte del cóctel con elegancia y precisión.</p>
+            </div>
+            <div class="box">
+              <h3>Formación</h3>
+              <p>En nuestra plataforma, la educación se convierte en una experiencia envolvente y práctica.
+                Desde niveles básicos hasta avanzados, te ofrecemos recursos y herramientas que facilitan tu crecimiento continuo.
+                Cada etapa está diseñada para construir un conocimiento sólido y aplicable,
+                preparando el camino para que tu pasión se convierta en habilidad maestra.</p>
+            </div>
+          </div>
+          <div id="columnas2" class="columnas-info">
+            <div class="box">
+              <h3>Prácticas y evaluaciones</h3>
+              <p>Las prácticas presenciales son una oportunidad para llevar el aprendizaje a la vida real.
+                A través de experiencias inmersivas, podrás aplicar tus conocimientos en un entorno dinámico y profesional.
+                Estos eventos no solo te permiten perfeccionar tus técnicas, sino también conectar con otros entusiastas y expertos,
+                ampliando tu red y enriqueciendo tu trayectoria.</p>
+            </div>
+            <div class="box">
+              <h3>Bolsa de Trabajo</h3>
+              <p>Nuestra bolsa de trabajo está diseñada para conectar a los talentos emergentes con oportunidades emocionantes en la industria de la coctelería.
+                Aquí, podrás explorar vacantes que van desde posiciones en establecimientos de renombre hasta roles en eventos exclusivos.
+                Es tu puerta de entrada para aplicar tus habilidades y avanzar en una carrera apasionante y prometedora.</p>
+            </div>
+          </div>
 
-<main role="main" class="container">
-  <div class = "container">
-    <h1>Bienvenidos a Taller Web 1</h1>
+        </section >
 
-    <a href="login.html" class="btn btn-lg btn-primary btn-block">Volver</a>
+        <section id="comunidad" class="fotos">
+          <div>
+            <h3>Comunidad</h3>
+            <p>Nuestra comunidad es un vibrante espacio de intercambio y apoyo, donde cada miembro puede compartir experiencias, consejos y éxitos.
+              Aquí, la pasión por la coctelería se celebra en cada conversación y evento, creando un ambiente inclusivo y estimulante.
+              Conéctate con otros entusiastas, aprende de sus experiencias y contribuye al crecimiento colectivo de nuestro mundo de cócteles.</p>
+          </div>
+          <div class="lista-fotos">
+            <img class="box3" th:src="@{/imgStatic/Comu_1.jpeg}" alt="imagenes_comunidad">
+            <img class="box3" th:src="@{/imgStatic/Comu_2.jpeg}" alt="imagenes_comunidad">
+            <img class="box3" th:src="@{/imgStatic/Comu_3.jpeg}" alt="imagenes_comunidad">
+            <img class="box3" th:src="@{/imgStatic/Comu_4.jpeg}" alt="imagenes_comunidad">
+            <img class="box3" th:src="@{/imgStatic/Comu_1.jpeg}" alt="imagenes_comunidad">
+            <img class="box3" th:src="@{/imgStatic/Comu_2.jpeg}" alt="imagenes_comunidad">
+            <img class="box3" th:src="@{/imgStatic/Comu_3.jpeg}" alt="imagenes_comunidad">
+            <img class="box3" th:src="@{/imgStatic/Comu_4.jpeg}" alt="imagenes_comunidad">
+            <img class="box3" th:src="@{/imgStatic/Comu_1.jpeg}" alt="imagenes_comunidad">
+            <img class="box3" th:src="@{/imgStatic/Comu_2.jpeg}" alt="imagenes_comunidad">
+          </div>
+        </section>
+
+        <a class="boton" th:href="@{/nuevo-usuario.html}">¡Sumate!</a>
+
+        <section id="FAQ" class="FAQ">
+          <h3>Preguntas Frecuentes</h3>
+          <div class="preguntas">
+            <div class="box2">
+             <h2>¿Cómo funcionan los niveles?</h2>
+              <p>Los niveles permiten a los estudiantes avanzar en su conocimiento y habilidad en la coctelería.
+                A medida que completas recetas y desafíos, acumulas puntos que te hacen subir de nivel.</p>
+            </div>
+            <div class="box2">
+              <h2>¿Qué debo hacer para desbloquear nuevas herramientas y beneficios?</h2>
+              <p>Al subir de nivel, automáticamente desbloquearás nuevas herramientas y recursos exclusivos,
+                como recetas avanzadas, acceso a eventos especiales, y mucho más.</p>
+            </div>
+            <div class="box2">
+              <h2>¿Cuántos niveles hay y cómo puedo subir de nivel?</h2>
+              <p>Hay un total de 5 niveles. Para subir de nivel, necesitas acumular puntos completando cursos, desafíos y eventos.
+                Cada nivel tiene un requisito diferente de puntos.</p>
+            </div>
+            <div class="box2">
+              <h2>¿Cómo puedo ver mi progreso y el nivel en el que estoy?</h2>
+              <p>Puedes revisar tu progreso y nivel actual en tu perfil de usuario,
+                donde también podrás ver cuántos puntos te faltan para alcanzar el próximo nivel.</p>
+            </div>
+            <div class="box2">
+              <h2>¿Qué tipo de herramientas y recursos se desbloquean al subir de nivel?</h2>
+              <p>Al avanzar de nivel, desbloquearás herramientas como recetas premium, acceso a catas virtuales,
+                herramientas de coctelería avanzadas, y contenido exclusivo.</p>
+            </div>
+            <div class="box2">
+              <h2>¿Las recetas y/o desafios están diseñados para principiantes o para profesionales?</h2>
+              <p>Las recetas y los desafios están diseñados para todos los niveles, desde principiantes hasta profesionales.
+                A medida que subes de nivel, el contenido se vuelve más avanzado.</p>
+            </div>
+            <div class="box2">
+              <h2>¿Cómo puedo ganar puntos además de completar las recetas?</h2>
+              <p>Además de las recetas, puedes ganar puntos participando en desafíos de coctelería,
+                eventos en línea y colaborando con otros usuarios en proyectos especiales.</p>
+            </div>
+            <div class="box2">
+              <h2>¿Es posible retroceder de nivel o perder herramientas desbloqueadas?</h2>
+              <p>No, una vez que has alcanzado un nivel y desbloqueado herramientas, no puedes retroceder ni perder los beneficios obtenidos.</p>
+            </div>
+            <div class="box2">
+              <h2>¿Puedo acceder a todas las recetas y herramientas desde el principio o necesito desbloquearlas?</h2>
+              <p>Algunas recetas y herramientas están disponibles desde el principio,
+                pero las más avanzados y especializadas se desbloquean a medida que subes de nivel.</p>
+            </div>
+            </div>
+        </section>
+        <section id="contacto" class="contacto">
+          <h3>Consultanos tus dudas</h3>
+          <form class="registro-form" action="enviar-formulario.php" method="post"> <!--NO SE MANDA NINGUN DATO-->
+            <div class="form-group">
+              <label for="nombre">Nombre:</label>
+              <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Correo electrónico:</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="asunto">Asunto:</label>
+              <input type="text" id="asunto" name="asunto" required>
+            </div>
+            <div class="form-group">
+              <label for="mensaje">Mensaje:</label>
+              <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+              <button type="submit">Enviar</button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </section>
   </div>
+
+
 </main>
-<!-- /.container -->
+<footer>
+  <p>© 2024 Cheers&Cheers. Todos los derechos reservados.</p>
+</footer>
 
 <!-- Boostrap core js -->
 <script type="text/javascript" th:src="@{webjars/bootstrap/5.2.0/js/bootstrap.min.js}"></script>
+<!--<script src="scripts.js"></script>-->
 </body>
 </html>

@@ -23,6 +23,16 @@ public class ControladorLogin {
         this.servicioLogin = servicioLogin;
     }
 
+    @RequestMapping(path = "/home", method = RequestMethod.GET)
+    public ModelAndView irAHome() {
+        return new ModelAndView("home");
+    }
+
+    @RequestMapping(path = "/", method = RequestMethod.GET)
+    public ModelAndView inicio() {
+        return new ModelAndView("redirect:/home"); //MODIFICADO PARA QUE INICIE EN LA PAGINA PRINCIPAL SIN REGISTRO
+    }
+
     @RequestMapping("/login")
     public ModelAndView irALogin() {
 
@@ -67,14 +77,5 @@ public class ControladorLogin {
         return new ModelAndView("nuevo-usuario", model);
     }
 
-    @RequestMapping(path = "/home", method = RequestMethod.GET)
-    public ModelAndView irAHome() {
-        return new ModelAndView("home");
-    }
-
-    @RequestMapping(path = "/", method = RequestMethod.GET)
-    public ModelAndView inicio() {
-        return new ModelAndView("redirect:/login");
-    }
 }
 
