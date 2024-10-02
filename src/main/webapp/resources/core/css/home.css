@@ -9,7 +9,6 @@ body{
     background-image: url("../imgStatic/FondoPc5.jpg");
     background-size: cover;
     background-attachment: fixed;
-
 }
 
 .hero {
@@ -175,7 +174,17 @@ textarea {
     max-height: 200px;
 }
 
-
+#enviar {
+    background-color: #cb5656;
+    color: white;
+    font-weight: 700;
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px 5em 10px 10px;
+}
 /*FOOTER*/
 footer {
     text-align: center;
@@ -185,3 +194,4 @@ footer {
     position: relative;
     bottom: 0;
 }
+

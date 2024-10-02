@@ -5,12 +5,12 @@ html, body {
     height: 100%;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    background-image: url('../../../resources/img/fondoCocteles.jpg');
+    background-image: url("../imgStatic/FondoCocteles.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     overflow-y: hidden;
+    background-attachment: fixed;
 }
 
 .container {
