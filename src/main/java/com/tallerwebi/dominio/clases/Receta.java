@@ -20,9 +20,19 @@ public class Receta {
     @OneToMany(mappedBy = "receta")
     private List<RecetaIngrediente> recetaIngredientes;
 
-    public Receta(String nombre, int puntaje, int idReceta) {
+    public Receta(String nombre, int puntaje, String instrucciones, Categoria categoria) {
         this.nombre = nombre;
         this.puntaje = puntaje;
+        this.instrucciones = instrucciones;
+        this.categoria = categoria;
+
+    }
+    public Receta(String nombre, int puntaje, String instrucciones) {
+        this.nombre = nombre;
+        this.puntaje = puntaje;
+        this.instrucciones = instrucciones;
+
+
     }
 
     public Receta() {
@@ -46,5 +56,7 @@ public class Receta {
     public int getPuntaje() {
         return puntaje;
     }
-
+    public String getInstrucciones() {
+        return instrucciones;
+    }
 }
