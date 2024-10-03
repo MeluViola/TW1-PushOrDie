@@ -351,8 +351,13 @@ button:hover {
 }
 
 .coctel-selection input[type="number"] {
-    margin-left: 60px; /* Ajusta este valor según lo necesites */
-    margin-right: 10px; /* Si necesitas un espacio a la derecha también */
-    height: 30px; /* Puedes ajustar la altura si es necesario */
+    margin-left: 10px; /* Ajusta este valor según lo necesites */
+    margin-right: 0px; /* Si necesitas un espacio a la derecha también */
+    height: 25px; /* Puedes ajustar la altura si es necesario */
     padding: 5px; /* Para un poco de espacio dentro del campo */
+    box-sizing: border-box;
+    margin-bottom: 5px; /* Add some space between the input fields */
 }
+
+
+

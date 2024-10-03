@@ -51,4 +51,15 @@ class CalculadoraController {
         // Retorna la vista "perfil" que mostrará los resultados
         return "perfil"; // Asegúrate de que esta sea la vista de perfil
     }
+
+    // Método para manejar peticiones GET que muestra el formulario de cálculo
+    @GetMapping("/formulario")
+    public String mostrarFormulario(Model model) {
+        // Si es necesario, puedes agregar datos al modelo que necesites en el formulario, por ejemplo, una lista de cócteles.
+        model.addAttribute("mensaje", "Completa el formulario para calcular los ingredientes necesarios para tu evento.");
+
+        // Retorna la vista que contiene el formulario (cambiar "formulario" por el nombre de tu archivo HTML o Thymeleaf correspondiente)
+        return "formulario";
+    }
+
 }

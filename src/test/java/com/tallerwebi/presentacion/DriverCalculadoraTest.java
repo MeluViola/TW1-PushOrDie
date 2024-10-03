@@ -3,6 +3,7 @@ package com.tallerwebi.presentacion;
 import com.tallerwebi.dominio.serviciosImpl.ServicioCalculadoraImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
 import org.springframework.ui.Model;
 import org.springframework.ui.ConcurrentModel;
 
@@ -27,9 +28,14 @@ class DriverCalculadoraTest {
 
     @Test
     void queElMetodoMostrarFormularioRetorneElNombreCorrectoDeLaVista() {
-        // Prueba que el metodo mostrarFormulario() retorne el nombre correcto de la vista
-        String viewName = controller.mostrarFormulario();
-        assertEquals("calculadora", viewName); // Verifica que la vista retornada sea "calculadora"
+        // Crear un mock de Model
+        Model model = Mockito.mock(Model.class);
+
+        // Invocar al metodo con el mock de Model
+        String viewName = controller.mostrarFormulario(model);
+
+        // Assert para verificar el nombre de la vista
+        assertEquals("formulario", viewName);
     }
 
     @Test
@@ -50,7 +56,7 @@ class DriverCalculadoraTest {
         String viewName = controller.calcularIngredientes(cantidadPersonas, coctelesPorPersona, coctelesSeleccionados, model);
 
         // Verifica que la vista retornada sea "resultado-calculadora"
-        assertEquals("resultado-calculadora", viewName);
+        assertEquals("perfil", viewName);
 
         // Verifica que el modelo contenga los atributos necesarios
         assertNotNull(model.getAttribute("totalCocteles"));

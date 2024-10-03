@@ -14,103 +14,107 @@ document.addEventListener('DOMContentLoaded', () => {
     const receta = {
         Mojito: {
             ingredientes: {
-                "Ron Blanco": { cantidad: 50, unidad: 'ml' },
-                "Jugo de Lima": { cantidad: 25, unidad: 'ml' },
-                "Azúcar": { cantidad: 10, unidad: 'g' },
+                "Ron Blanco": { cantidad: 60, unidad: 'ml' },
+                "Jugo de Lima": { cantidad: 30, unidad: 'ml' },
+                "Azúcar": { cantidad: 30, unidad: 'g' },
                 "Hojas de Menta": { cantidad: 5, unidad: 'hojas' },
-                "Agua con Gas": { cantidad: 100, unidad: 'ml' }
+                "Soda": { cantidad: 120, unidad: 'ml' }
             }
         },
         Margarita: {
             ingredientes: {
                 "Tequila": { cantidad: 60, unidad: 'ml' },
                 "Triple Sec": { cantidad: 30, unidad: 'ml' },
-                "Jugo de Lima": { cantidad: 20, unidad: 'ml' }
+                "Jugo de Lima": { cantidad: 30, unidad: 'ml' }
             }
         },
         Daiquiri: {
             ingredientes: {
-                "Ron Blanco": { cantidad: 45, unidad: 'ml' },
-                "Jugo de Lima": { cantidad: 25, unidad: 'ml' },
-                "Azúcar": { cantidad: 10, unidad: 'g' }
+                "Ron Blanco": { cantidad: 60, unidad: 'ml' },
+                "Jugo de Lima": { cantidad: 30, unidad: 'ml' },
+                "Azúcar": { cantidad: 30, unidad: 'g' }
             }
         },
         TomCollins: {
             ingredientes: {
                 "Ginebra": { cantidad: 60, unidad: 'ml' },
                 "Jugo de Limón": { cantidad: 30, unidad: 'ml' },
-                "Jarabe de Azúcar": { cantidad: 15, unidad: 'ml' },
-                "Agua con Gas": { cantidad: 100, unidad: 'ml' }
+                "Álmibar": { cantidad: 30, unidad: 'ml' },
+                "Soda": { cantidad: 120, unidad: 'ml' }
             }
         },
         Gancia: {
             ingredientes: {
-                "Gancia": { cantidad: 100, unidad: 'ml' }
+                "Gancia": { cantidad: 60, unidad: 'ml' },
+                "Jugo de Limón": { cantidad: 30, unidad: 'ml' },
+                "Sprite": { cantidad: 150, unidad: 'ml' }
             }
         },
         Fernet: {
             ingredientes: {
-                "Fernet": { cantidad: 50, unidad: 'ml' }
+                "Fernet": { cantidad: 60, unidad: 'ml' },
+                "Coca-Cola": { cantidad: 150, unidad: 'ml' }
             }
         },
         GinFizz: {
             ingredientes: {
-                "Ginebra": { cantidad: 50, unidad: 'ml' },
-                "Jugo de Limón": { cantidad: 25, unidad: 'ml' },
-                "Agua con Gas": { cantidad: 100, unidad: 'ml' }
+                "Fizz macerado en Gin": { cantidad: 60, unidad: 'ml' },
+                "Sprite": { cantidad: 150, unidad: 'ml' }
             }
         },
         Destornillador: {
             ingredientes: {
-                "Vodka": { cantidad: 50, unidad: 'ml' },
-                "Jugo de Naranja": { cantidad: 100, unidad: 'ml' }
+                "Vodka": { cantidad: 60, unidad: 'ml' },
+                "Jugo de Naranja": { cantidad: 150, unidad: 'ml' }
             }
         },
         Garibaldi: {
             ingredientes: {
-                "Campari": { cantidad: 45, unidad: 'ml' },
-                "Jugo de Naranja": { cantidad: 90, unidad: 'ml' }
+                "Campari": { cantidad: 60, unidad: 'ml' },
+                "Jugo de Naranja": { cantidad: 120, unidad: 'ml' },
+                "Granadina": { cantidad: 30, unidad: 'ml' }
             }
         },
         ElectricDemon: {
             ingredientes: {
                 "Vodka": { cantidad: 60, unidad: 'ml' },
-                "Limonada": { cantidad: 120, unidad: 'ml' }
+                "Limonada": { cantidad: 120, unidad: 'ml' },
+                "Blue Curacao": { cantidad: 30, unidad: 'ml' },
             }
         },
         BlackRussian: {
             ingredientes: {
-                "Vodka": { cantidad: 50, unidad: 'ml' },
-                "Licor de Café": { cantidad: 20, unidad: 'ml' }
+                "Vodka": { cantidad: 60, unidad: 'ml' },
+                "Licor de Café": { cantidad: 30, unidad: 'ml' }
             }
         },
         CaféIrlandes: {
             ingredientes: {
-                "Whiskey": { cantidad: 40, unidad: 'ml' },
+                "Whiskey": { cantidad: 60, unidad: 'ml' },
                 "Café": { cantidad: 150, unidad: 'ml' },
-                "Azúcar": { cantidad: 15, unidad: 'g' },
+                "Azúcar": { cantidad: 30, unidad: 'g' },
                 "Crema": { cantidad: 30, unidad: 'ml' }
             }
         },
         Caipirinha: {
             ingredientes: {
-                "Cachaça": { cantidad: 50, unidad: 'ml' },
-                "Azúcar": { cantidad: 15, unidad: 'g' },
-                "Lima": { cantidad: 20, unidad: 'g' } // Lima como gramos, ajusta si es necesario
+                "Cachaça": { cantidad: 60, unidad: 'ml' },
+                "Azúcar": { cantidad: 30, unidad: 'g' },
+                "Lima": { cantidad: 0.5, unidad: 'unidad/es' }
             }
         },
         Caipiroska: {
             ingredientes: {
-                "Vodka": { cantidad: 50, unidad: 'ml' },
-                "Azúcar": { cantidad: 15, unidad: 'g' },
-                "Lima": { cantidad: 20, unidad: 'g' }
+                "Vodka": { cantidad: 60, unidad: 'ml' },
+                "Azúcar": { cantidad: 30, unidad: 'g' },
+                "Lima": { cantidad: 0.5, unidad: 'unidad/es' }
             }
         },
         Caipirissima: {
             ingredientes: {
-                "Ron": { cantidad: 50, unidad: 'ml' },
-                "Azúcar": { cantidad: 15, unidad: 'g' },
-                "Lima": { cantidad: 20, unidad: 'g' }
+                "Ron": { cantidad: 60, unidad: 'ml' },
+                "Azúcar": { cantidad: 30, unidad: 'g' },
+                "Lima": { cantidad: 0.5, unidad: 'unidad/es' }
             }
         },
         Negroni: {
@@ -118,6 +122,33 @@ document.addEventListener('DOMContentLoaded', () => {
                 "Gin": { cantidad: 30, unidad: 'ml' },
                 "Vermouth Rosso": { cantidad: 30, unidad: 'ml' },
                 "Campari": { cantidad: 30, unidad: 'ml' }
+            }
+        },
+        TequilaSunrise: {
+            ingredientes: {
+                "Tequila": { cantidad: 60, unidad: 'ml' },
+                "Granadina": { cantidad: 30, unidad: 'ml' },
+                "Jugo de Naranja": { cantidad: 120, unidad: 'ml' }
+            }
+        },
+        BloodyMary: {
+            ingredientes: {
+                "Vodka": { cantidad: 60, unidad: 'ml' },
+                "Jugo de Tomate": { cantidad: 90, unidad: 'ml' },
+                "Jugo de Limón": { cantidad: 30, unidad: 'ml' },
+                "Sal": { cantidad: 5, unidad: 'g' },
+                "Pimienta": { cantidad: 5, unidad: 'g' },
+            }
+        },
+        LongIslandIcedTea: {
+            ingredientes: {
+                "Vodka": { cantidad: 30, unidad: 'ml' },
+                "Ron Blanco": { cantidad: 30, unidad: 'ml' },
+                "Gin": { cantidad: 30, unidad: 'ml' },
+                "Tequila Blanco": { cantidad: 30, unidad: 'ml' },
+                "Triple Sec": { cantidad: 15, unidad: 'ml' },
+                "Jugo de Limón": { cantidad: 30, unidad: 'ml' },
+                "Coca-Cola": { cantidad: 60, unidad: 'ml' }
             }
         }
     };
@@ -152,11 +183,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Función para convertir ml a botellas
     function convertirABotellas(cantidad, unidad) {
-        const conversion = 750; // mililitros por botella
+        const conversionMlPorBotella = 750; // mililitros por botella
+        const conversionMlPorOnza = 30; // 1 onza = 30 ml
+        const onzasPorCoctel = cantidad / conversionMlPorOnza; // Calcula las onzas
         if (unidad === 'ml') {
-            const botellas = Math.max(1, Math.floor(cantidad / conversion)); // Asegura mínimo 1 botella
-            const sobrante = cantidad % conversion;
-            return `${cantidad} ml (${botellas} ${botellas === 1 ? 'botella' : 'botellas'}${sobrante > 0 ? ` y ${sobrante} ml` : ''})`;
+            const botellas = Math.max(1, Math.floor(cantidad / conversionMlPorBotella)); // Asegura mínimo 1 botella
+            const sobrante = cantidad % conversionMlPorBotella;
+           // return `${cantidad} ml (${botellas} ${botellas === 1 ? 'botella' : 'botellas'})`;
+            return `${botellas} ${botellas === 1 ? 'botella' : 'botellas'}`;
         }
         return `${cantidad} ${unidad}`; // Para otros tipos de unidades, no hacemos conversión
     }

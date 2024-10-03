@@ -1,0 +1,259 @@
+{
+  "Mojito": {
+    "ingredientes": {
+      "Ron Blanco": {
+        "cantidad": 60,
+        "unidad": "ml"
+      },
+      "Jugo de Lima": {
+        "cantidad": 30,
+        "unidad": "ml"
+      },
+      "Azúcar": {
+        "cantidad": 30,
+        "unidad": "g"
+      },
+      "Hojas de Menta": {
+        "cantidad": 5,
+        "unidad": "hojas"
+      },
+      "Agua con Gas": {
+        "cantidad": 120,
+        "unidad": "ml"
+      }
+    }
+  },
+  "Margarita": {
+    "ingredientes": {
+      "Tequila": {
+        "cantidad": 60,
+        "unidad": "ml"
+      },
+      "Triple Sec": {
+        "cantidad": 30,
+        "unidad": "ml"
+      },
+      "Jugo de Lima": {
+        "cantidad": 30,
+        "unidad": "ml"
+      }
+    }
+  },
+  "Daiquiri": {
+    "ingredientes": {
+      "Ron Blanco": {
+        "cantidad": 60,
+        "unidad": "ml"
+      },
+      "Jugo de Lima": {
+        "cantidad": 30,
+        "unidad": "ml"
+      },
+      "Azúcar": {
+        "cantidad": 30,
+        "unidad": "g"
+      }
+    }
+  },
+  "TomCollins": {
+    "ingredientes": {
+      "Ginebra": {
+        "cantidad": 60,
+        "unidad": "ml"
+      },
+      "Jugo de Limón": {
+        "cantidad": 30,
+        "unidad": "ml"
+      },
+      "Jarabe de Azúcar": {
+        "cantidad": 30,
+        "unidad": "ml"
+      },
+      "Agua con Gas": {
+        "cantidad": 120,
+        "unidad": "ml"
+      }
+    }
+  },
+  "Gancia": {
+    "ingredientes": {
+      "Gancia": {
+        "cantidad": 60,
+        "unidad": "ml"
+      },
+      "Azúcar": {
+        "cantidad": 30,
+        "unidad": "ml"
+      },
+      "Gaseosa de Lima Limón": {
+        "cantidad": 120,
+        "unidad": "ml"
+      }
+    }
+  },
+  "Fernet": {
+    "ingredientes": {
+      "Fernet": {
+        "cantidad": 60,
+        "unidad": "ml"
+      },
+      "Coca Cola": {
+        "cantidad": 150,
+        "unidad": "ml"
+      }
+    }
+  },
+  "GinFizz": {
+    "ingredientes": {
+      "Fizz Macerado en Gin": {
+        "cantidad": 60,
+        "unidad": "ml"
+      },
+      "Jugo de Limón": {
+        "cantidad": 15,
+        "unidad": "ml"
+      },
+      "Agua Tónica": {
+        "cantidad": 120,
+        "unidad": "ml"
+      }
+    }
+  },
+  "Destornillador": {
+    "ingredientes": {
+      "Vodka": {
+        "cantidad": 60,
+        "unidad": "ml"
+      },
+      "Jugo de Naranja": {
+        "cantidad": 120,
+        "unidad": "ml"
+      }
+    }
+  },
+  "Garibaldi": {
+    "ingredientes": {
+      "Campari": {
+        "cantidad": 60,
+        "unidad": "ml"
+      },
+      "Jugo de Naranja": {
+        "cantidad": 120,
+        "unidad": "ml"
+      }
+    }
+  },
+  "ElectricDemon": {
+    "ingredientes": {
+      "Vodka": {
+        "cantidad": 60,
+        "unidad": "ml"
+      },
+      "Limonada": {
+        "cantidad": 120,
+        "unidad": "ml"
+      },
+      "Blue Curacao": {
+        "cantidad": 30,
+        "unidad": "ml"
+      },
+      "Jarabe de Azúcar": {
+        "cantidad": 30,
+        "unidad": "ml"
+      }
+    }
+  },
+  "BlackRussian": {
+    "ingredientes": {
+      "Vodka": {
+        "cantidad": 60,
+        "unidad": "ml"
+      },
+      "Licor de Café": {
+        "cantidad": 30,
+        "unidad": "ml"
+      }
+    }
+  },
+  "CaféIrlandes": {
+    "ingredientes": {
+      "Whiskey": {
+        "cantidad": 30,
+        "unidad": "ml"
+      },
+      "Café": {
+        "cantidad": 150,
+        "unidad": "ml"
+      },
+      "Azúcar": {
+        "cantidad": 15,
+        "unidad": "g"
+      },
+      "Crema": {
+        "cantidad": 30,
+        "unidad": "ml"
+      }
+    }
+  },
+  "Caipirinha": {
+    "ingredientes": {
+      "Cachaça": {
+        "cantidad": 60,
+        "unidad": "ml"
+      },
+      "Azúcar": {
+        "cantidad": 30,
+        "unidad": "g"
+      },
+      "Lima": {
+        "cantidad": 20,
+        "unidad": "g"
+      }
+    }
+  },
+  "Caipiroska": {
+    "ingredientes": {
+      "Vodka": {
+        "cantidad": 60,
+        "unidad": "ml"
+      },
+      "Azúcar": {
+        "cantidad": 30,
+        "unidad": "g"
+      },
+      "Lima": {
+        "cantidad": 20,
+        "unidad": "g"
+      }
+    }
+  },
+  "Caipirissima": {
+    "ingredientes": {
+      "Ron": {
+        "cantidad": 60,
+        "unidad": "ml"
+      },
+      "Azúcar": {
+        "cantidad": 30,
+        "unidad": "g"
+      },
+      "Lima": {
+        "cantidad": 20,
+        "unidad": "g"
+      }
+    }
+  },
+  "Negroni": {
+    "ingredientes": {
+      "Gin": {
+        "cantidad": 30,
+        "unidad": "ml"
+      },
+      "Vermouth Rosso": {
+        "cantidad": 30,
+        "unidad": "ml"
+      },
+      "Campari": {
+        "cantidad": 30,
+        "unidad": "ml"
+      }}}}
