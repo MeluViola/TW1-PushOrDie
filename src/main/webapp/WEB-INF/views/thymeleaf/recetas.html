@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recetas</title>
+    <!-- Boostrap core css -->
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.2.0/css/bootstrap.min.css}"/>
+
+    <!-- custom style -->
+    <link rel="stylesheet" th:href="@{/css/generales.css}"/>
+    <link rel="stylesheet" th:href="@{/css/recetas.css}"/>
+</head>
+<body>
+<header id="menu">
+    <nav>
+        <ul id="nav-links">
+            <li><a th:href="@{/perfil.html}">Mi Perfil</a></li>
+            <li><a href="#">Eventos</a></li>
+            <li><a href="#"></a>Foro</li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+<h1>Nuestras Recetas</h1>
+<div class="cocktail-container">
+    <!-- Tarjetas de cocteles -->
+    <div class="cocktail-card">
+        <h2>RUSO NEGRO</h2>
+        <img th:src="@{/imgStatic/rusoNegro.jpeg}" alt="Ruso-Negro">
+        <p class="ingredientes">Ingredientes: <br>
+            - 2 oz (60 ml) vodka <br>
+            - 1 oz (30 ml) de licor de café o Kahlua <br>
+            - Hielo <br>
+            - Opcional: coca-cola para rellenar
+        </p>
+        <button class="ver-mas" th:onclick="openPopup(0)">Ver más</button>
+    </div>
+    <div class="cocktail-card">
+        <h2>TINTO DE VERANO</h2>
+        <img th:src="@{/imgStatic/TintoVerano.jpg}" alt="Tinto-de-Verano">
+        <p class="ingredientes">Ingredientes: <br>
+            - 4 oz (120 ml) de vino tinto<br>
+            - 4 oz (120 ml) de Sprite <br>
+            - Hielo <br>
+            - 3 rodajas de limón
+            <br>
+            <br>
+        </p>
+        <button class="ver-mas" th:onclick="openPopup(1)">Ver más</button>
+    </div>
+    <div class="cocktail-card">
+        <h2>GIN TONIC DE FRUTILLA</h2>
+        <img th:src="@{/imgStatic/ginTonicFrutilla.jpg}" alt="Gin-Tonic-Frutilla">
+        <p class="ingredientes">Ingredientes: <br>
+            - 1.5 oz (45 ml) gin<br>
+            - 4 a 5 oz (120 ml a 150 ml) agua tónica <br>
+            - 3 frutillas cortadas en rodajas <br>
+            - Una rodaja de lima o limón
+        </p>
+        <button class="ver-mas" th:onclick="openPopup(2)">Ver más</button>
+    </div>
+    <div class="cocktail-card">
+        <h2>CUBA LIBRE</h2>
+        <img th:src="@{/imgStatic/CubaLibre.jpg}" alt="Cuba-Libre">
+        <p class="ingredientes">Ingredientes: <br>
+            - 1.5 oz (45 ml) ron<br>
+            - 3 oz (90 ml) coca-cola <br>
+            - Algunas gotas de jugo de lima <br>
+            - Hielo <br>
+            - Media rodaja de lima
+        </p>
+        <button class="ver-mas" th:onclick="openPopup(3)">Ver más</button>
+    </div>
+    <div class="cocktail-card">
+        <h2>NEGRONI</h2>
+        <img th:src="@{/imgStatic/negroni2.jpg}" alt="Negroni">
+        <p class="ingredientes">Ingredientes: <br>
+            - 1 oz (30 ml) gin<br>
+            - 1 oz (30 ml) vermut rojo dulce <br>
+            - 1 oz (30 ml) Campari <br>
+            - Hielo <br>
+            - Una rodaja de naranja
+        </p>
+        <button class="ver-mas" th:onclick="openPopup(4)">Ver más</button>
+    </div>
+    <div class="cocktail-card">
+        <h2>TOM COLLINS</h2>
+        <img th:src="@{/imgStatic/tomCollins.jpg}" alt="Tom-Collins">
+        <p class="ingredientes">Ingredientes: <br>
+            - 2 oz (60 ml) gin<br>
+            - 1 oz (30 ml) jugo de limón fresco <br>
+            - 0.5 oz (15 ml) jarabe de azúcar<br>
+            - 4 oz (120 ml) soda <br>
+            - Hielo <br>
+            - Una rodaja de limón <br>
+            - Una cereza
+        </p>
+        <button class="ver-mas" th:onclick="openPopup(5)">Ver más</button>
+    </div>
+    <div class="cocktail-card">
+        <h2>APEROL SPRITZ</h2>
+        <img th:src="@{/imgStatic/aperolSpritz.jpg}" alt="Aperol-Spritz">
+        <p class="ingredientes">Ingredientes: <br>
+            - 3 oz (90 ml) Prosecco <br>
+            - 2 oz (60 ml) Aperol <br>
+            - 1 oz (30 ml) agua con gas<br>
+            - Hielo <br>
+            - Media rodaja de naranja <br>
+            <br>
+            <br>
+        </p>
+        <button class="ver-mas" th:onclick="openPopup(6)">Ver más</button>
+    </div>
+    <div class="cocktail-card">
+        <h2>SEX ON THE BEACH</h2>
+        <img th:src="@{/imgStatic/sexOnTheBeach.jpg}" alt="Aperol-Spritz">
+        <p class="ingredientes">Ingredientes: <br>
+            - 1.5 oz (45 ml) vodka <br>
+            - 0.5 oz (15 ml) licor de durazno <br>
+            - 1.5 oz (45 ml) jugo de naranja<br>
+            - 1.5 oz (45 ml) jugo de arándano <br>
+            - Hielo <br>
+            - Una rodaja de naranja <br>
+            <br>
+        </p>
+        <button class="ver-mas" th:onclick="openPopup(7)">Ver más</button>
+    </div>
+    <div class="cocktail-card">
+        <h2>CAFE IRLANDES</h2>
+        <img th:src="@{/imgStatic/cafeIrlandes.jpg}" alt="Café-Irlandés">
+        <p class="ingredientes">Ingredientes: <br>
+            - 1.5 oz (45 ml) whiskey irlandés <br>
+            - 1 cucharadita de azúcar <br>
+            - 4 oz (120 ml) café caliente<br>
+            - 1 oz (30 ml) crema batida <br>
+            <br>
+            <br>
+            <br>
+        </p>
+        <button class="ver-mas" th:onclick="openPopup(8)">Ver más</button>
+    </div>
+</div>
+
+<!-- Popup de detalles -->
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <h2 id="popup-title"></h2>
+        <img id="popup-img" alt="Imagen del cóctel">
+        <p id="popup-ingredients"></p>
+        <p id="popup-details"></p>
+    </div>
+</div>
+</main>
+
+<!--<footer>
+    <p>© 2024 Cheers&Cheers. Todos los derechos reservados.</p>
+</footer>-->
+
+<script th:src="@{/js/recetas.js}"></script>
+
+<!-- Boostrap core js -->
+<script type="text/javascript" th:src="@{webjars/bootstrap/5.2.0/js/bootstrap.min.js}"></script>
+</body>
+</html>
