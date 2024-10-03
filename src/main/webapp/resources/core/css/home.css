@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap');
+
 body{
     font-family: Arial, sans-serif;
     margin: 0;
@@ -19,6 +20,7 @@ body{
     padding-bottom: 15%;
     text-align: center;
     margin: 60px 0;
+    height: 52em;
 }
 .hero h1{
     font-family: "Pacifico", cursive;
@@ -174,17 +176,6 @@ textarea {
     max-height: 200px;
 }
 
-#enviar {
-    background-color: #cb5656;
-    color: white;
-    font-weight: 700;
-    border: none;
-    padding: 5px 10px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin: 10px 5em 10px 10px;
-}
 /*FOOTER*/
 footer {
     text-align: center;

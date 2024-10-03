@@ -67,13 +67,13 @@ public class ControladorLoginTest {
 	}
 
 	@Test
-	public void registrameSiUsuarioNoExisteDeberiaCrearUsuarioYEnviarAPerfil() throws UsuarioExistente {
+	public void registrameSiUsuarioNoExisteDeberiaCrearUsuarioYEnviarAPaginaDeRecetas() throws UsuarioExistente {
 
 		// ejecucion
 		ModelAndView modelAndView = controladorLogin.registrarme(usuarioMock);
 
 		// validacion
-		assertThat(modelAndView.getViewName(), equalToIgnoringCase("redirect:/perfil"));
+		assertThat(modelAndView.getViewName(), equalToIgnoringCase("redirect:/recetas"));
 		verify(servicioLoginMock, times(1)).registrar(usuarioMock);
 	}
 

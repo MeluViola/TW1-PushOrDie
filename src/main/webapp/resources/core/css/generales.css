@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap');
+
 #menu nav {
     text-align: center;
     top: 0px;
@@ -44,14 +47,18 @@
     justify-content: center;
 }
 
-#enviar{
+#enviar {
     background-color: #cb5656;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
     color: white;
     font-weight: 700;
     border: none;
-    padding: 5px 10px;
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
-    margin: 10px 5em 10px 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 10px;
 }
