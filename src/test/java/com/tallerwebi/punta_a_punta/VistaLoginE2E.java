@@ -60,11 +60,11 @@ public class VistaLoginE2E {
     }
 
     @Test
-    void deberiaNavegarAlHomeSiElUsuarioExiste() {
+    void deberiaNavegarAlPerfilSiElUsuarioExiste() {
         vistaLogin.escribirEMAIL("test@unlam.edu.ar");
         vistaLogin.escribirClave("test");
         vistaLogin.darClickEnIniciarSesion();
         String url = vistaLogin.obtenerURLActual();
-        assertThat(url, containsStringIgnoringCase("/spring/home"));
+        assertThat(url, containsStringIgnoringCase("/spring/perfil"));
     }
 }

@@ -1,6 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap');
 
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+    background-image: url("../imgStatic/FondoPc5.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
 .hero {
     justify-items: center;
     justify-content: center;
@@ -9,6 +20,7 @@
     padding-bottom: 15%;
     text-align: center;
     margin: 60px 0;
+    height: 52em;
 }
 .hero h1{
     font-family: "Pacifico", cursive;
@@ -164,7 +176,6 @@ textarea {
     max-height: 200px;
 }
 
-
 /*FOOTER*/
 footer {
     text-align: center;
@@ -174,3 +185,4 @@ footer {
     position: relative;
     bottom: 0;
 }
+
