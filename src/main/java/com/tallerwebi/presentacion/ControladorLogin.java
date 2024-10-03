@@ -38,7 +38,7 @@ public class ControladorLogin {
         Usuario usuarioBuscado = servicioLogin.consultarUsuario(datosLogin.getEmail(), datosLogin.getPassword());
         if (usuarioBuscado != null) {
             request.getSession().setAttribute("ROL", usuarioBuscado.getRol());
-            return new ModelAndView("redirect:/perfil");
+            return new ModelAndView("redirect:/perfil"); //ACA HABRIA QUE ACCEDER A UN PERFIL DE USUARIO CON CONTENIDO (BASE DE DATOS)
         } else {
             model.put("error", "Usuario o clave incorrecta");
         }
@@ -59,7 +59,7 @@ public class ControladorLogin {
             model.put("error", "Error al registrar el nuevo usuario");
             return new ModelAndView("nuevo-usuario", model);
         }
-        return new ModelAndView("redirect:/login");
+        return new ModelAndView("redirect:/perfil"); //ESTE SERIA PERFIL NUEVO
     }
 
     @RequestMapping(path = "/nuevo-usuario", method = RequestMethod.GET)

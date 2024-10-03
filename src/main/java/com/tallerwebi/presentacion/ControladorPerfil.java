@@ -11,7 +11,6 @@ public class ControladorPerfil {
 
     @RequestMapping(path = "/perfil", method = RequestMethod.GET)
     public ModelAndView irAPerfil() {
-        ModelMap modelo = new ModelMap();
-        return new ModelAndView("perfil", modelo);
+        return new ModelAndView("perfil");
     }
 }
