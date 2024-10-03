@@ -34,6 +34,50 @@
             </button>
         </div>
 
+        <!-- Contenedor de la calculadora (oculto por defecto) -->
+        <div id="calculator-container" class="calculator hidden">
+            <h3>Calculadora de Cócteles</h3>
+            <form id="calculator-form">
+                <label for="cantidadPersonas">Cantidad de Personas</label>
+                <input type="number" id="cantidadPersonas" class="input-largo" placeholder="Ingrese la cantidad de Personas">
+
+                <label for="coctelesPorPersona">Cócteles por Persona</label>
+                <input type="number" id="coctelesPorPersona" class="input-largo" placeholder="Ingrese la cantidad de cócteles por Persona">
+
+                <h4>Selección de Cócteles</h4>
+                <div class="coctel-selection">
+                    <label for="mojito">Mojito: <input type="number" id="mojito" name="mojito" min="0" placeholder="0"></label><br>
+                    <label for="margarita">Margarita: <input type="number" id="margarita" name="margarita" min="0"placeholder="0"></label><br>
+                    <label for="daiquiri">Daiquiri: <input type="number" id="daiquiri" name="daiquiri" min="0" placeholder="0"></label><br>
+                    <label for="tomCollins">Tom Collins: <input type="number" id="tomCollins" name="tomCollins" min="0" placeholder="0"></label><br>
+                    <label for="gancia">Gancia: <input type="number" id="gancia" name="gancia" min="0" placeholder="0"></label><br>
+                    <label for="fernet">Fernet: <input type="number" id="fernet" name="fernet" min="0" placeholder="0"></label><br>
+                    <label for="ginFizz">Gin Fizz: <input type="number" id="ginFizz" name="ginFizz" min="0" placeholder="0"></label><br>
+                    <label for="destornillador">Destornillador: <input type="number" id="destornillador" name="destornillador" min="0" placeholder="0"></label><br>
+                    <label for="garibaldi">Garibaldi: <input type="number" id="garibaldi" name="garibaldi" min="0" placeholder="0"></label><br>
+                    <label for="electricDemon">Electric Demon: <input type="number" id="electricDemon" name="electricDemon" min="0" placeholder="0"></label><br>
+                    <label for="blackRussian">Black Russian: <input type="number" id="blackRussian" name="blackRussian" min="0" placeholder="0"></label><br>
+                    <label for="cafeIrlandes">Café Irlandés: <input type="number" id="cafeIrlandes" name="cafeIrlandes" min="0" placeholder="0"></label><br>
+                    <label for="caipiroska">Caipiroska: <input type="number" id="caipiroska" name="caipiroska" min="0" placeholder="0"></label><br>
+                    <label for="caipirissima">Caipirissima: <input type="number" id="caipirissima" name="caipirissima" min="0" placeholder="0"></label><br>
+                    <label for="negroni">Negroni: <input type="number" id="negroni" name="negroni" min="0" placeholder="0"></label><br>
+                </div>
+
+                <div id="advertencia-div" class="hidden" style="color: red; font-weight: bold;"></div>
+
+                <button id="calcular-btn" type="button">Calcular</button>
+                <button id="limpiar-btn" type="button">Limpiar</button>
+            </form>
+        </div>
+
+        <!-- Vista de resultados (oculta por defecto) -->
+        <div id="resultados-container" class="hidden">
+            <h3>Resultados de la Calculadora</h3>
+            <p id="total-cocteles"></p>
+            <ul id="ingredientes-list"></ul>
+            <button id="volver-btn">Volver a la Calculadora</button>
+        </div>
+
     </div>
 </header>
 
@@ -127,4 +171,5 @@
 
 </main>
 </body>
+<script src="../../../resources/core/js/perfil.js"></script>
 </html>

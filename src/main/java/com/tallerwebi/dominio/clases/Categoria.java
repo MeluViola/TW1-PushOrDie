@@ -11,10 +11,16 @@ public class Categoria {
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         private int idCategoria;
 
+        @Column(name = "nombre_categoria")
         private String nombreCategoria;
 
 
+    public Categoria() {}
 
+    public Categoria(String nombreCategoria) {
+        this.nombreCategoria = nombreCategoria;
     }
+}
+
 
 

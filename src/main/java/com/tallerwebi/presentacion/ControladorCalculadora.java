@@ -20,14 +20,14 @@ class CalculadoraController {
         this.calculadora = calculadora;
     }
 
-    // Metodo para manejar peticiones GET a "/calculadora", que muestra el formulario de la calculadora
-    @GetMapping("/calculadora")
-    public String mostrarFormulario() {
-        return "calculadora"; // Retorna la vista del formulario "calculadora"
+    // Método para manejar peticiones GET a "/perfil", que muestra la vista del perfil
+    @GetMapping("/perfil")
+    public String mostrarPerfil() {
+        return "perfil"; // Retorna la vista del perfil
     }
 
-    // Metodo para manejar el envío del formulario mediante POST a "/resultado-calculadora"
-    @PostMapping("/resultado-calculadora")
+    // Método para manejar el envío del formulario mediante POST a "/perfil"
+    @PostMapping("/perfil")
     public String calcularIngredientes(
             @RequestParam("cantidadPersonas") int cantidadPersonas, // Recoge la cantidad de personas del formulario
             @RequestParam("coctelesPorPersona") int coctelesPorPersona, // Recoge la cantidad de cócteles por persona del formulario
@@ -44,11 +44,11 @@ class CalculadoraController {
         // Calcula la cantidad de ingredientes necesarios en función del total de cócteles y el tipo de cócteles seleccionados
         Map<String, Integer> ingredientes = calculadora.calcularIngredientes(totalCocteles, coctelesSeleccionadosInt);
 
-        // Agrega los atributos al modelo para mostrarlos en la vista
+        // Agrega los atributos al modelo para mostrarlos en la vista de perfil
         model.addAttribute("totalCocteles", totalCocteles);
         model.addAttribute("ingredientes", ingredientes);
 
-        // Retorna la vista "resultado-calculadora" que mostrará el resultado de los cálculos
-        return "resultado-calculadora";
+        // Retorna la vista "perfil" que mostrará los resultados
+        return "perfil"; // Asegúrate de que esta sea la vista de perfil
     }
 }

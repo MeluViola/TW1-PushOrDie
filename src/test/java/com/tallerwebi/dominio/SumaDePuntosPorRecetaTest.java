@@ -45,7 +45,7 @@ public class SumaDePuntosPorRecetaTest {
         Usuario usuario = new Usuario();
         usuario.setIdUsuario(1);
         usuario.setPuntos(0); // Inicializa los puntos en cero
-        Receta receta = new Receta("Manhattan", 4, 1);
+        Receta receta = new Receta("Manhattan", 4, "instruccion" );
 
         this.servicioRecetaImpl.completarReceta(usuario, receta);
 
@@ -55,7 +55,7 @@ public class SumaDePuntosPorRecetaTest {
     @Test
     public void cuandoLaRecetaNoTieneUnPuntajeAsignadoQueLanceUnaExcepcion() {
         Usuario usuario = new Usuario();
-        Receta receta = new Receta("Mojito", 0, 2); // Puntaje 0 no permitido
+        Receta receta = new Receta("Mojito", 0, "instruccion"); // Puntaje 0 no permitido
 
         IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
             this.servicioRecetaImpl.completarReceta(usuario, receta);
@@ -68,7 +68,7 @@ public class SumaDePuntosPorRecetaTest {
     public void cuandoElUsuarioTienePuntajeAcumuladoYCompletaUnaRecetaSumaCorrectamenteTodosLosDiferentesPuntos() {
         Usuario usuario = new Usuario();
         usuario.setPuntos(3); // Usuario ya tiene 3 puntos acumulados
-        Receta receta = new Receta("Martini", 2, 3);
+        Receta receta = new Receta("Martini", 2, "instruccion");
 
         this.servicioRecetaImpl.completarReceta(usuario, receta);
 
@@ -80,9 +80,9 @@ public class SumaDePuntosPorRecetaTest {
         Usuario usuario = new Usuario();
         usuario.setPuntos(0);
 
-        Receta receta1 = new Receta("Margarita", 3, 4);
-        Receta receta2 = new Receta("Mojito", 2, 5);
-        Receta receta3 = new Receta("Caipirinha", 5, 6);
+        Receta receta1 = new Receta("Margarita", 3, "instruccion");
+        Receta receta2 = new Receta("Mojito", 2, "instruccion");
+        Receta receta3 = new Receta("Caipirinha", 5, "instruccion");
 
         this.servicioRecetaImpl.completarReceta(usuario, receta1);
         this.servicioRecetaImpl.completarReceta(usuario, receta2);
@@ -94,7 +94,7 @@ public class SumaDePuntosPorRecetaTest {
     @Test
     public void cuandoSeMarcaUnaRecetaComoCompletaYElUsuarioNoEstabaLogueadoNiRegistradoQueLanceUnaExcepcion() {
         Usuario usuario = null;
-        Receta receta = new Receta("Whiskey Sour", 3, 7);
+        Receta receta = new Receta("Whiskey Sour", 3, "instruccion");
 
         IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
             this.servicioRecetaImpl.completarReceta(usuario, receta);
@@ -109,16 +109,16 @@ public class SumaDePuntosPorRecetaTest {
         usuario.setIdUsuario(1);
         usuario.setPuntos(0);
 
-        Receta receta1 = new Receta("Margarita", 5, 4);
-        Receta receta2 = new Receta("Mojito", 5, 5);
-        Receta receta3 = new Receta("Caipirinha", 5, 6);
-        Receta receta4 = new Receta("Margarita", 5, 3);
-        Receta receta5 = new Receta("Mojito", 5, 6);
-        Receta receta6 = new Receta("Caipirinha", 5, 7);
-        Receta receta7 = new Receta("Caipirinha", 5, 9);
-        Receta receta8 = new Receta("Margarita", 5, 11);
-        Receta receta9 = new Receta("Mojito", 5, 23);
-        Receta receta10 = new Receta("Caipirinha", 5, 15);
+        Receta receta1 = new Receta("Margarita", 5, "instruccion");
+        Receta receta2 = new Receta("Mojito", 5, "instruccion");
+        Receta receta3 = new Receta("Caipirinha", 5, "instruccion");
+        Receta receta4 = new Receta("Margarita", 5, "instruccion");
+        Receta receta5 = new Receta("Mojito", 5, "instruccion");
+        Receta receta6 = new Receta("Caipirinha", 5, "instruccion");
+        Receta receta7 = new Receta("Caipirinha", 5, "instruccion");
+        Receta receta8 = new Receta("Margarita", 5, "instruccion");
+        Receta receta9 = new Receta("Mojito", 5, "instruccion");
+        Receta receta10 = new Receta("Caipirinha", 5, "instruccion");
 
         this.servicioRecetaImpl.completarReceta(usuario, receta1);
         this.servicioRecetaImpl.completarReceta(usuario, receta2);

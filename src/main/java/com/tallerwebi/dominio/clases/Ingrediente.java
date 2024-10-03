@@ -10,7 +10,7 @@ public class Ingrediente {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idIngrediente;
 
-    @Column(nullable = false, length = 45)
+    @Column(name = "nombre_ingrediente",nullable = false, length = 45)
     private String nombreIngrediente;
 
     @OneToMany(mappedBy = "ingrediente")
